@@ -50,9 +50,13 @@ export function executeCommand(input: string) {
   }
 
   if (trimmed === "resume") {
+    const link = document.createElement("a");
+    link.href = "/CV_SD_Focused.pdf";
+    link.download = "Urbana_Resume.pdf";
+    link.click();
     store.addEntry({
       type: "output",
-      content: "Preparing resume download... (Resume PDF would be downloaded here)",
+      content: "Downloading resume...",
     });
     return;
   }

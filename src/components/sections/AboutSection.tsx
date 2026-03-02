@@ -23,9 +23,11 @@ export default function AboutSection() {
         >
           <div className="relative w-36 h-36 rounded-2xl overflow-hidden glow-primary">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20" />
-            <div className="w-full h-full flex items-center justify-center font-mono text-4xl font-bold text-primary">
-              U
-            </div>
+            <img
+              src="/Portfolio_Image.png"
+              alt="Urbana's profile photo"
+              className="w-full h-full object-cover relative z-10"
+            />
           </div>
         </motion.div>
 
