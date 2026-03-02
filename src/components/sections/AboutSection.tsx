@@ -23,11 +23,14 @@ export default function AboutSection() {
         >
           <div className="relative w-48 h-48 rounded-2xl overflow-hidden glow-primary">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20" />
+
             <img
-              src="/Portfolio_Image.png"
-              alt="Urbana's profile photo"
+              src="https://lh3.googleusercontent.com/d/1LCXTay7xoE0-ZWz8gOqf3lnbD9537fHP"
+              alt={profileData.name}
               className="w-full h-full object-cover relative z-10"
+              referrerPolicy="no-referrer"
             />
+
           </div>
         </motion.div>
 

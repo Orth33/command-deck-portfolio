@@ -59,12 +59,13 @@ export default function ContactSection() {
         transition={{ delay: 0.35 }}
       >
         <a
-          href="/CV_SD_Focused.pdf"
+          href="https://drive.google.com/uc?export=download&id=1LgrQM3j7INOcqwS7Cvm_RSZKXYjZRR-1"
           download="Urbana_Resume.pdf"
           className="inline-block px-5 py-2.5 text-sm font-mono rounded-lg bg-primary/10 text-primary border border-primary/30 hover:bg-primary/20 transition-colors"
         >
           Download Resume ↓
         </a>
+
       </motion.div>
     </div>
   );
