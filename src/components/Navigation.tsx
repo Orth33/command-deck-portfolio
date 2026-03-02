@@ -13,7 +13,7 @@ export default function Navigation() {
   const { activeSection } = useTerminalStore();
 
   return (
-    <nav className="flex items-center gap-0.5 sm:gap-2 overflow-x-auto scrollbar-hide w-full justify-end" role="navigation" aria-label="Main navigation">
+    <nav className="flex items-center gap-0.2 sm:gap-2 overflow-x-auto scrollbar-hide w-full justify-end" role="navigation" aria-label="Main navigation">
       {navItems.map((item) => (
         <button
           key={item.command}
