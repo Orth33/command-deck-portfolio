@@ -1,4 +1,6 @@
 import { useTerminalStore, SectionType } from "@/store/useTerminalStore";
+import confetti from "canvas-confetti";
+
 
 const COMMANDS: Record<string, { description: string; section?: SectionType }> = {
   help: { description: "Show available commands" },
@@ -7,7 +9,8 @@ const COMMANDS: Record<string, { description: string; section?: SectionType }> =
   projects: { description: "Explore project portfolio", section: "projects" },
   experience: { description: "View work experience", section: "experience" },
   contact: { description: "Get in touch", section: "contact" },
-  resume: { description: "Download resume" },
+  resume: { description: "Download my resume" },
+  theme: { description: "Toggle light/dark mode" },
   clear: { description: "Clear terminal" },
   close: { description: "Close active panel" },
 };
@@ -66,6 +69,22 @@ export function executeCommand(input: string) {
       type: "output",
       content: "🎉 You found the easter egg! Urbana appreciates your curiosity.",
     });
+    confetti({
+      particleCount: 180,
+      spread: 90,
+      origin: { y: 0.5 },
+      colors: ['#d946ef', '#4f46e5', '#14b8a6', '#f0f0f8'],
+    });
+    return;
+  }
+
+  if (trimmed === "theme") {
+    const newTheme = store.theme === "light" ? "dark" : "light";
+    store.setTheme(newTheme);
+    store.addEntry({
+      type: "output",
+      content: `Theme switched to ${newTheme}.`,
+    });
     return;
   }
 
@@ -79,6 +98,8 @@ export function executeCommand(input: string) {
     });
     return;
   }
+
+
 
   store.addEntry({
     type: "error",

@@ -39,9 +39,9 @@ export default function SkillsSection() {
 
                 {tooltip?.name === skill.name && (
                   <motion.div
-                    initial={{ opacity: 0, y: 4 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="absolute z-50 bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-3 glass-panel text-xs space-y-1"
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    className="absolute z-50 bottom-full left-1/2 -translate-x-1/2 mb-2 w-40 sm:w-48 p-2 sm:p-3 glass-panel text-[10px] sm:text-xs space-y-1 pointer-events-none"
                   >
                     <p className="text-foreground font-medium">{skill.achievement}</p>
                     <p className="text-muted-foreground">

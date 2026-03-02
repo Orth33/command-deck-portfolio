@@ -25,7 +25,7 @@ export default function ContactSection() {
         transition={{ delay: 0.1 }}
         className="text-sm text-muted-foreground"
       >
-        Open to opportunities in ML engineering, research, and full-stack development.
+        I'm open to full-time roles, research collaborations, and interesting projects. Let's connect.
       </motion.p>
 
       <div className="space-y-2">

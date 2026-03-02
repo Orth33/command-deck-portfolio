@@ -13,7 +13,7 @@ export default function AboutSection() {
         About
       </motion.h2>
 
-      <div className="flex flex-col md:flex-row gap-6">
+      <div className="flex flex-col sm:flex-row gap-6">
         {/* Profile visual */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -21,7 +21,7 @@ export default function AboutSection() {
           transition={{ delay: 0.1 }}
           className="shrink-0 flex items-center justify-center"
         >
-          <div className="relative w-36 h-36 rounded-2xl overflow-hidden glow-primary">
+          <div className="relative w-48 h-48 rounded-2xl overflow-hidden glow-primary">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20" />
             <img
               src="/Portfolio_Image.png"
@@ -41,11 +41,18 @@ export default function AboutSection() {
           <h3 className="text-lg font-semibold text-foreground">{profileData.name}</h3>
           <p className="text-sm text-secondary font-mono">{profileData.title}</p>
           <p className="text-sm text-muted-foreground leading-relaxed">{profileData.bio}</p>
+          {profileData.subtitle && <p className="text-sm text-muted-foreground leading-relaxed">{profileData.subtitle}</p>}
+
+          {/* Location / status */}
+          <div className="flex items-center gap-2 font-mono text-sm text-secondary">
+            <span className="inline-block w-2 h-2 rounded-full bg-secondary animate-pulse" />
+            Available for opportunities
+          </div>
         </motion.div>
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         {profileData.stats.map((stat, i) => (
           <GlassCard key={stat.label} className="text-center">
             <motion.div

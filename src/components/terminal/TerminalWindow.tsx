@@ -9,9 +9,8 @@ export default function TerminalWindow() {
   return (
     <motion.div
       layout
-      className={`flex flex-col h-full bg-terminal-bg rounded-xl border border-border/50 overflow-hidden shadow-2xl ${
-        isSectionOpen ? "w-full lg:w-[35%]" : "w-full max-w-4xl mx-auto"
-      }`}
+      className={`flex flex-col h-full bg-terminal-bg rounded-xl border border-border/50 overflow-hidden shadow-2xl transition-all duration-400 ${isSectionOpen ? "w-full lg:w-[35%]" : "w-full lg:max-w-4xl lg:mx-auto"
+        }`}
       transition={{ layout: { duration: 0.4, ease: [0.25, 0.1, 0.25, 1] } }}
     >
       {/* Mac-style header */}

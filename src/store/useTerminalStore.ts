@@ -15,6 +15,7 @@ interface TerminalState {
   commandIndex: number;
   activeSection: SectionType;
   isSectionOpen: boolean;
+  theme: "light" | "dark";
   addEntry: (entry: Omit<HistoryEntry, "id">) => void;
   addCommand: (cmd: string) => void;
   getPreviousCommand: () => string | null;
@@ -22,6 +23,7 @@ interface TerminalState {
   setActiveSection: (section: SectionType) => void;
   clearHistory: () => void;
   closeSection: () => void;
+  setTheme: (theme: "light" | "dark") => void;
 }
 
 let entryId = 0;
@@ -38,6 +40,7 @@ export const useTerminalStore = create<TerminalState>((set, get) => ({
   commandIndex: -1,
   activeSection: null,
   isSectionOpen: false,
+  theme: "dark",
 
   addEntry: (entry) =>
     set((state) => ({
@@ -86,4 +89,14 @@ export const useTerminalStore = create<TerminalState>((set, get) => ({
     }),
 
   closeSection: () => set({ activeSection: null, isSectionOpen: false }),
+
+  setTheme: (theme) => {
+    set({ theme });
+    const htmlElement = document.documentElement;
+    if (theme === "light") {
+      htmlElement.classList.add("light");
+    } else {
+      htmlElement.classList.remove("light");
+    }
+  },
 }));
