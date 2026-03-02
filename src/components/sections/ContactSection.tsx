@@ -58,9 +58,13 @@ export default function ContactSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.35 }}
       >
-        <button className="px-5 py-2.5 text-sm font-mono rounded-lg bg-primary/10 text-primary border border-primary/30 hover:bg-primary/20 transition-colors">
+        <a
+          href="/CV_SD_Focused.pdf"
+          download="Urbana_Resume.pdf"
+          className="inline-block px-5 py-2.5 text-sm font-mono rounded-lg bg-primary/10 text-primary border border-primary/30 hover:bg-primary/20 transition-colors"
+        >
           Download Resume ↓
-        </button>
+        </a>
       </motion.div>
     </div>
   );
