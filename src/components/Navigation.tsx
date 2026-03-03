@@ -16,7 +16,7 @@ export default function Navigation({ className }: NavigationProps) {
   const { activeSection } = useTerminalStore();
 
   return (
-    <nav className={`flex items-center gap-2 overflow-x-auto scrollbar-hide justify-end ${className || ""}`} role="navigation" aria-label="Main navigation">
+    <nav className={`flex items-center space-x-4 overflow-x-auto scrollbar-hide justify-end ${className || ""}`} role="navigation" aria-label="Main navigation">
       {navItems.map((item) => (
         <button
           key={item.command}
