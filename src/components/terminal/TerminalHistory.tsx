@@ -7,7 +7,11 @@ export default function TerminalHistory() {
   const bottomRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+    // Smoother scroll to bottom when history updates
+    const timer = setTimeout(() => {
+      bottomRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+    }, 100);
+    return () => clearTimeout(timer);
   }, [history]);
 
   const getColor = (type: string) => {
@@ -35,7 +39,7 @@ export default function TerminalHistory() {
           </motion.div>
         ))}
       </AnimatePresence>
-      <div ref={bottomRef} />
+      <div ref={bottomRef} className="h-4 shrink-0" />
     </div>
   );
 }

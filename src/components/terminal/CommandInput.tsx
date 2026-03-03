@@ -21,10 +21,17 @@ export default function CommandInput() {
     executeCommand(input.trim());
     setInput("");
     setHint(null);
+
+    // Mobile specific: Dismiss keyboard after execution
+    const isMobile = window.matchMedia("(pointer: coarse)").matches;
+    if (isMobile) {
+      inputRef.current?.blur();
+    }
   };
 
   const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
+      e.preventDefault();
       handleSubmit();
     } else if (e.key === "Tab" && hint) {
       e.preventDefault();
