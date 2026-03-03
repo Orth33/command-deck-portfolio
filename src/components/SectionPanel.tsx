@@ -30,7 +30,7 @@ export default function SectionPanel() {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: 30 }}
           transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
-          className="w-full lg:flex-1 h-full overflow-y-auto scrollbar-thin p-4 sm:p-6"
+          className="w-full lg:flex-1 h-full overflow-y-auto scrollbar-hide sm:scrollbar-thin p-4 sm:p-6"
         >
           <div className="flex items-center justify-between mb-6">
             <div />

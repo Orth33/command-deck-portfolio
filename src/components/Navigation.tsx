@@ -8,17 +8,20 @@ const navItems: { label: string; command: string; section: SectionType }[] = [
   { label: "Experience", command: "experience", section: "experience" },
   { label: "Contact", command: "contact", section: "contact" },
 ];
+interface NavigationProps {
+  className?: string;
+}
 
-export default function Navigation() {
+export default function Navigation({ className }: NavigationProps) {
   const { activeSection } = useTerminalStore();
 
   return (
-    <nav className="flex items-center gap-0.2 sm:gap-2 overflow-x-auto scrollbar-hide w-full justify-end" role="navigation" aria-label="Main navigation">
+    <nav className={`flex items-center gap-2 overflow-x-auto scrollbar-hide justify-end ${className || ""}`} role="navigation" aria-label="Main navigation">
       {navItems.map((item) => (
         <button
           key={item.command}
           onClick={() => executeCommand(item.command)}
-          className={`px-2 sm:px-3 py-1.5 text-[10px] sm:text-xs font-mono rounded-md transition-all duration-200 whitespace-nowrap ${activeSection === item.section
+          className={`px-4 py-2 text-xs font-mono rounded-md transition-all duration-200 whitespace-nowrap ${activeSection === item.section
             ? "bg-primary/15 text-primary border border-primary/30"
             : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
             }`}

@@ -21,7 +21,7 @@ export default function TerminalHistory() {
   };
 
   return (
-    <div className="flex-1 overflow-y-auto px-4 py-4 scrollbar-thin" role="log" aria-label="Terminal output">
+    <div className="flex-1 overflow-y-auto px-4 py-4 scrollbar-hide sm:scrollbar-thin" role="log" aria-label="Terminal output">
       <AnimatePresence initial={false}>
         {history.map((entry) => (
           <motion.div

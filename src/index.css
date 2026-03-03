@@ -5,6 +5,7 @@
 @tailwind utilities;
 
 @layer base {
+
   /* dark theme defaults */
   :root {
     --background: 222 47% 11%;
@@ -197,6 +198,7 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
