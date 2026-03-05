@@ -8,7 +8,7 @@ const Index = () => {
   const { isSectionOpen } = useTerminalStore();
 
   return (
-    <div className="flex flex-col h-screen bg-background overflow-x-hidden md:pb-0 pb-20">
+    <div className="flex flex-col min-h-screen lg:h-screen bg-background md:pb-0 pb-20">
       {/* Top bar - Hidden on mobile, shown on SM and up */}
       <header className="flex items-center justify-between px-6 py-3 border-b border-border/30 shrink-0">
         <div className="flex items-center gap-3 shrink-0">
