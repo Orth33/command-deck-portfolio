@@ -9,7 +9,7 @@ const COMMANDS: Record<string, { description: string; section?: SectionType }> =
   projects: { description: "Explore project portfolio", section: "projects" },
   experience: { description: "View work experience", section: "experience" },
   contact: { description: "Get in touch", section: "contact" },
-  resume: { description: "Download my resume" },
+  resume: { description: "Download Urbana's resume" },
   theme: { description: "Toggle light/dark mode" },
   clear: { description: "Clear terminal" },
   close: { description: "Close active panel" },
@@ -98,8 +98,6 @@ export function executeCommand(input: string) {
     });
     return;
   }
-
-
 
   store.addEntry({
     type: "error",

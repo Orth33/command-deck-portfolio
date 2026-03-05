@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import TerminalWindow from "@/components/terminal/TerminalWindow";
 import Navigation from "@/components/Navigation";
 import MobileNavigation from "@/components/MobileNavigation";
@@ -5,7 +6,19 @@ import SectionPanel from "@/components/SectionPanel";
 import { useTerminalStore } from "@/store/useTerminalStore";
 
 const Index = () => {
-  const { isSectionOpen } = useTerminalStore();
+  const { isSectionOpen, activeSection } = useTerminalStore();
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Only scroll on mobile/small screens (lg breakpoint is 1024px)
+    if (isSectionOpen && window.innerWidth < 1024 && sectionRef.current) {
+      // Small delay to ensure the section content is being rendered
+      const timer = setTimeout(() => {
+        sectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [isSectionOpen, activeSection]);
 
   return (
     <div className="flex flex-col min-h-screen lg:h-screen bg-background md:pb-0 pb-20">
@@ -19,9 +32,11 @@ const Index = () => {
       </header>
 
       {/* Main content */}
-      <main className={`flex flex-col lg:flex-row flex-1 overflow-hidden p-4 gap-4 ${!isSectionOpen ? "items-center justify-center" : ""}`}>
+      <main className={`flex flex-col lg:flex-row flex-1 overflow-y-auto lg:overflow-hidden p-4 gap-4 ${!isSectionOpen ? "items-center justify-center" : ""}`}>
         <TerminalWindow />
-        <SectionPanel />
+        <div ref={sectionRef} className="sm:w-full">
+          <SectionPanel />
+        </div>
       </main>
 
       {/* Mobile-only Floating Navigation */}
