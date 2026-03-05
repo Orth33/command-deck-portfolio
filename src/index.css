@@ -157,6 +157,12 @@
     box-shadow: 0 0 20px hsl(338 82% 50% / 0.15), 0 0 40px hsl(338 82% 50% / 0.05);
   }
 
+/* .glow-primary {
+  filter: drop-shadow(0 0 14px hsl(338 82% 25% / 0.5))
+          drop-shadow(0 0 36px hsl(338 82% 25% / 0.35))
+          drop-shadow(0 0 70px hsl(338 82% 50% / 0.2));
+} */
+
   .glow-secondary {
     box-shadow: 0 0 20px hsl(168 76% 42% / 0.15), 0 0 40px hsl(168 76% 42% / 0.05);
   }

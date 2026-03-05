@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import GlassCard from "@/components/ui/GlassCard";
 import { profileData } from "@/lib/data";
+import ProtectedImage from "../../utils/ProtectedImage";
 
 export default function AboutSection() {
   return (
@@ -14,6 +15,7 @@ export default function AboutSection() {
       </motion.h2>
 
       <div className="flex flex-col sm:flex-row gap-6">
+
         {/* Profile visual */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -21,18 +23,20 @@ export default function AboutSection() {
           transition={{ delay: 0.1 }}
           className="shrink-0 flex items-center justify-center"
         >
-          <div className="relative w-48 h-48 rounded-2xl overflow-hidden glow-primary">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20" />
-
+          <div className="relative w-48 h-48 flex items-center justify-center">
+            <div className="absolute inset-0 rounded-full bg-primary/25 blur-3xl opacity-60"></div>
             <img
               src="https://lh3.googleusercontent.com/d/1LCXTay7xoE0-ZWz8gOqf3lnbD9537fHP"
+              // src = "/Portfolio_Image.png"
               alt={profileData.name}
-              className="w-full h-full object-cover relative z-10"
+              className="relative z-10 w-48 h-48 object-contain"
               referrerPolicy="no-referrer"
+              onContextMenu={(e) => e.preventDefault()}
             />
 
           </div>
         </motion.div>
+        
 
         {/* Bio */}
         <motion.div
