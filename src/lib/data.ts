@@ -129,7 +129,7 @@ export const experiences: Experience[] = [
   {
     id: "exp-1",
     role: "Machine Learning Research Intern",
-    organization: "Elvvo Pathways, Cairo, Egypt",
+    organization: "Elevvo Pathways, Cairo, Egypt",
     duration: "Feb 2026 – March 2026",
     achievements: [
       "Developed and deployed ML models using Random Forest, XGBoost, Logistic Regression, collaborative filtering(Funk SVD), and CNN-based deep learning architectures.",
@@ -179,7 +179,7 @@ export const skillCategories: SkillCategory[] = [
       { name: "Node.js", projects: ["TradeHub"], achievement: "Real-time WebSocket server" },
       { name: "TailwindCSS", projects: ["TradeHub", "CommandDeck"], achievement: "Design system implementation" },
       { name: "MongoDB", projects: ["TradeHub"], achievement: "Complex query optimization" },
-      {name: "Express", projects: ["TradeHub"], achievement: "RESTful API design"},
+      { name: "Express", projects: ["TradeHub"], achievement: "RESTful API design" },
     ],
   },
   {
