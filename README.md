@@ -89,11 +89,3 @@ Navigate through the portfolio using terminal commands or the navigation menu. E
 3. Commit your changes: `git commit -am 'Add some feature'`
 4. Push to the branch: `git push origin feature/your-feature`
 5. Submit a pull request
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-Feel free to reach out through the contact section of the portfolio or via [your-email@example.com](mailto:your-email@example.com).
