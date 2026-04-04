@@ -134,17 +134,18 @@ export const experiences: Experience[] = [
     achievements: [
       "Developed and deployed ML models using Random Forest, XGBoost, Logistic Regression, collaborative filtering(Funk SVD), and CNN-based deep learning architectures.",
       "Applied feature engineering, SMOTE, time-series analysis, transfer learning, and cross-validation to enhance model performance and generalization.",
-      " Evaluated models using RMSE, accuracy, precision, recall, and F1-score; performed systematic hyperparameter tuning for optimal pipeline reproducibility.",
+      "Evaluated models using RMSE, accuracy, precision, recall, and F1-score; performed systematic hyperparameter tuning for optimal pipeline reproducibility.",
     ],
   },
   {
     id: "exp-2",
     role: "Full Stack Development Internship",
     organization: "CodeAlpha, Remote",
-    duration: "March 2026 – Present",
+    duration: "March 2026 – Apr 2026",
     achievements: [
       "Designed and implemented a full-stack web application using React, Node.js, Express, and MongoDB.",
       "Implemented user authentication, real-time messaging, and role-based access control.",
+      "Optimized database queries and API endpoints for improved performance and scalability.",
     ],
   },
   {
@@ -153,7 +154,7 @@ export const experiences: Experience[] = [
     organization: "University of Liberal Arts Bangladesh",
     duration: "Sept 2025 – Present",
     achievements: [
-      "Mentored 120+ students in programming fundamentals, data structures, and algorithms across multiple courses.",
+      "Mentored 120+ students in programming fundamentals, data structures, algorithms and Object-Oriented Programming (OOP) across multiple courses.",
       "Assisted faculty in lab/course sessions; supported students with course materials, assignments, and lab tasks.",
       "Managed course logistics, scheduled consultation sessions, and maintained grade records",
     ],
